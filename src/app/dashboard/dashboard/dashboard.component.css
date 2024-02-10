@@ -1,0 +1,90 @@
+.w3-row-padding {
+  height: 100vh;
+}
+::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+  background: gray;
+  display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background: #035fb2;
+  border-radius: 10px;
+}
+
+.row > .card {
+  height: 80px;
+  width: 179px;
+  border-top: 6px solid black;
+  margin: 8px;
+}
+
+.title {
+  font-size: 14px;
+  color: grey;
+  padding-top: 1px;
+  font-weight: 500;
+}
+
+.count {
+  font-size: 19px;
+  font-weight: bold;
+  margin-top: -5px;
+}
+
+#myDiv {
+  height: 380px;
+}
+
+.borders {
+  border: 2px solid red;
+}
+
+.card-mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* height: 100px; */
+  overflow: hidden;
+  overflow: scroll;
+  flex-wrap: wrap;
+}
+
+@media (max-width: "576px") {
+  .row > .card {
+    width: 250px;
+  }
+
+  .chart {
+    height: 300px;
+    padding: 0px;
+  }
+
+  .card-mobile {
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+
+.row .card .count {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}

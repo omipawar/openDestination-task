@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="row height d-flex justify-content-center align-items-center">
+        <div class="col-md-6">
+            <div class="form">
+                <h2 class="text-light">Search Hotels</h2>
+                <input
+                    type="text"
+                    id="myInput"
+                    placeholder="Search for hotels.."
+                    title="hotel"
+                    (input)="onSearchInputChange($event)"
+                >
+                <ul *ngIf="hotels && hotels.length>0" id="myUL" #myDiv (scroll)="onScroll($event)">
+                    <li *ngFor="let hotel of hotels;">
+                        <a routerLink="../dashboard/{{hotel.hotel_id}}"><u>{{hotel?.hotel_name}}</u></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
